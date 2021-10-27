@@ -1,0 +1,55 @@
+Created on Wed Oct 27 22:59:07 2021
+
+@author: ervan
+"""
+
+print("====================================")
+print("HARGA TIKET MASUK KEBUN BINATANG") 
+print("====================================")
+print("1. Umur 1-2 Tahun : GRATIS!!!")
+print("2. UMUR 3-12 TAHUN : $14")
+print("3. UMUR 13-64 TAHUN :  $23")
+print("4. UMUR 65 TAHUN KEATAS : $18")
+
+jumlahUang = 0
+while True:
+    try:
+        umur = int(input("SILAKAN MASUKAN UMUR: "))
+    except ValueError:
+        break
+    if umur <= 2:
+        jumlahUang += 0
+        print("==========================================================")
+        print("HARGA TIKET GRATIS UNTUK UMUR 2 TAHUN KEBAWAH")
+        print("TOTAL HARGA SAAT INI : ")
+        print("TEKAN ENTER UNTUK MELANJUTKAN TRANSAKSI PEMBAYARAN !!")
+        print("==========================================================")
+
+    elif umur in [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]:
+        jumlahUang += 14
+        print("==========================================================")
+        print("HARGA TIKET $14")
+        print("TOTAL HARGA SAAT INI : ")
+        print("TEKAN ENTER UNTUK MELANJUTKAN TRANSAKSI PEMBAYARAN !!")
+        print("==========================================================")
+
+    elif umur >= 66:
+        jumlahUang += 18
+        print("==========================================================")
+        print("HARGA TIKET $18")
+        print("TOTAL HARGA SAAT INI : ")
+        print("TEKAN ENTER UNTUK MELANJUTKAN TRANSAKSI PEMBAYARAN !!")
+        print("==========================================================")
+
+    else:
+        jumlahUang += 23
+        print("==========================================================")
+        print("HARGA TIKET $23")
+        print("TOTAL HARGA SAAT INI : ")
+        print("TEKAN ENTER UNTUK MELANJUTKAN TRANSAKSI PEMBAYARAN!!")
+        print("==========================================================")
+
+
+UANGCUSTEMER = int(input("MASUKAN JUMLAH UANG ANDA : "))
+TOTALKEMBALI = UANGCUSTEMER - jumlahUang
+print("TOTAL KEMBALIAN UANG :")
